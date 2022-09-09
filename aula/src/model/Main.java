@@ -19,8 +19,24 @@ public class Main {
         var contatos = contatoDao.buscaTodosContatos();
 
         for (Contato c: contatos) {
-            System.out.println(c.getNome());
+            System.out.println(c.getId()+"  "+c.getNome()+"  "+c.getEmail()+"  "+c.getEndereco());
         }
+
+        System.out.println("_____________________");
+      //  System.out.println(contatoDao.buscaContatoPorID(1));
+
+        // contatoDao.removeContato(1);
+
+        System.out.println("REMOVIDO CONTATO 1_________");
+        Contato exemplo = new Contato(4,"paulo plinio", "Gilso@hotmail.com","rua das gardenias");
+        contatoDao.atualizaContato(exemplo);
+
+
+
+
+
+
+
 
     }
 }
